@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     // Initialize the zip archiver
     const passThrough = new PassThrough();
-    const archive = archiver('zip', { zlib: { level: 9 } });
+    const archive = archiver.create('zip', { zlib: { level: 9 } });
     
     archive.pipe(passThrough);
 
