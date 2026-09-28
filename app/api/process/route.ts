@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
-import archiver from 'archiver';
+const archiver = require('archiver');
 import { PassThrough } from 'stream';
 
 export async function POST(req: NextRequest) {
